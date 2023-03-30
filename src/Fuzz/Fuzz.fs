@@ -108,6 +108,7 @@ let private repeatRandFuzz opt contSpec concQ randQ randFuzzBudget =
   (concQ, randQ)
 
 let rec private fuzzLoop opt contSpec concQ randQ =
+  TCManage.printCoverage ()
   let concolicBudget, randFuzzBudget = allocResource ()
   let concQSize = ConcolicQueue.size concQ
   let randQSize = RandFuzzQueue.size randQ

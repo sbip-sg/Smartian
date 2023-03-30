@@ -60,6 +60,9 @@ let printStatistics () =
   log "  Freezing Ether: %d" totalFE
   log "  Requirement Violation: %d" totalRV
 
+let printCoverage () =
+  log "Covered Instructions: %d" accumInstrs.Count
+
 let getTestCaseCount () =
   totalTC
 
